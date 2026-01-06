@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Don’s Mobile Tire Website (Next.js)
+
+Marketing + booking entry website for a mobile tire service. Built to drive conversions (Book Now / Call / Text) and establish credibility for customers, partners, and financing.
+
+## Tech
+- Next.js (App Router)
+- TypeScript (recommended)
+- Tailwind CSS (recommended)
+- Vercel deployment (recommended)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+# or npm install / yarn
+
+Run locally
+
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⸻
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Project Structure (Suggested)
 
-## Learn More
+/
+├─ app/
+│  ├─ page.tsx                # Home
+│  ├─ book/
+│  │  └─ page.tsx             # Book Now
+│  ├─ services/
+│  │  ├─ page.tsx             # Services overview
+│  │  └─ [slug]/page.tsx      # Service detail pages (optional)
+│  ├─ coverage/page.tsx
+│  ├─ pricing/page.tsx
+│  ├─ fleet/page.tsx
+│  ├─ reviews/page.tsx
+│  ├─ about/page.tsx
+│  ├─ faq/page.tsx
+│  └─ contact/page.tsx
+├─ components/
+│  ├─ layout/
+│  ├─ sections/               # Hero, ServicesGrid, HowItWorks, etc.
+│  └─ ui/
+├─ content/
+│  ├─ site.ts                 # Business name, phone, address, coverage list
+│  ├─ services.ts             # Services + descriptions
+│  └─ faqs.ts
+└─ docs/
+   ├─ sitemap-onepager.md
+   └─ homepage-copy.md
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+⸻
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Content Setup (Do This First)
 
-## Deploy on Vercel
+Update these placeholders:
+	•	Business name
+	•	Service area / metro
+	•	Phone number
+	•	Booking link / booking flow (even if it starts as a form)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you’re not ready for a full booking system yet, the Book Now page can:
+	•	Collect service + address + preferred time window
+	•	Route submissions to email/SMS
+	•	Offer click-to-call and click-to-text as fallback
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⸻
+
+Deployment
+
+Recommended: Vercel
+	•	Push to GitHub
+	•	Import to Vercel
+	•	Deploy
+
+⸻
+
+Goals / Success Metrics
+	•	Visitors can start booking in < 10 seconds
+	•	Clear service area + pricing expectations
+	•	Trust signals: proof photos, testimonials, policies
+	•	Fleet lead capture (recurring revenue story)
+
+---
